@@ -1,0 +1,74 @@
+schema: inkflow.decision-registry/admission-v1
+recordId: GOV-BOOTSTRAP-001-DECISION-v1
+recordType: constituting-decision
+status: PENDING_CANDIDATE_DECISION_AND_SIGNATURE
+candidateIdentityRef: GITHUB_USER:liluck62-boop
+candidateGitHubUsername: liluck62-boop
+roleAssignmentAcceptance: "引用候选人已签署的 GOV-BOOTSTRAP-001-ROLE-ACCEPTANCE-v1"
+competenceConflictDisclosure: "引用候选人已签署的 GOV-BOOTSTRAP-001-COMPETENCE-CONFLICT-v1"
+reviewedMaterials:
+  - id: INKFLOW-M6-A07-APPROVER-PACKAGE-001
+    version: "0.1"
+    path: 20261023-1707-InkFlow-M6-A07-liluck62-boop-Review-Package-v0.1.md
+    sha256: ECF6356090B99F41C18A0045BE7838E67F869FAFCE2D8A7542CF411F5EDFF6CD
+  - id: FOUNDER-ROOT-001-v1.0
+    version: 1
+    ownerSignedCommitSha: PENDING_OWNER_SIGNED_COMMIT
+    ownerSignedCommitUrl: PENDING_OWNER_SIGNED_COMMIT_URL
+    sha256: PENDING_CANDIDATE_VERIFY
+  - id: "ProductBook 1810"
+    sections: ["§§12–16", "§19", "§30", "§47", "§§60–65", "§112", "§114"]
+    sourceCommitOrDigest: "20261023-1707-InkFlow-M6-A07-liluck62-boop-Review-Baseline-Manifest.yaml SHA256 FF433A1E3662D937A431CB1C66FAC7CD39AB614F2500B21BDEA3D228E7C5DAAB; source file digest in manifest"
+  - id: "ProductBook 1820"
+    sections: ["§15", "Appendix B"]
+    sourceCommitOrDigest: "同上 Manifest；source file digest in manifest"
+  - id: "ProductBook 1885"
+    sections: ["§§110–112"]
+    sourceCommitOrDigest: "同上 Manifest；source file digest in manifest"
+  - id: "ProductBook 1890"
+    sections: ["§§16", "§22", "§30", "§58"]
+    sourceCommitOrDigest: "同上 Manifest；source file digest in manifest"
+  - id: "ProductBook 008"
+    sections: ["§14.2", "§§26.2–26.3"]
+    sourceCommitOrDigest: "同上 Manifest；source file digest in manifest"
+  - id: "Registry evidence"
+    references: ["bootstrap-ledger-v1.json", "registry-bootstrap-receipt-0001.json", "registry-bootstrap-receipt-0002.json", "ruleset 25699958"]
+    state: "只作为受保护证据存储的既有状态；不证明 Mandate 生效"
+    sourceCommitOrDigest: "同上 Manifest；each Registry file digest in manifest; Ruleset URL listed in Manifest"
+decisionScope:
+  approveOrReject:
+    - "FOUNDER-GOV-001-v1 初始项目治理 Mandate"
+    - "DR-REGISTRY-RECORD-001-v1 仅记录/索引/链接的 Decision Right"
+    - "INKFLOW-REGISTRY-CUSTODIAN-001-v1 初始临时 Registry Custodian 任命"
+  excluded:
+    - AUTH-1
+    - AUTH-2
+    - AUTH-3
+    - AUTH-4
+    - AUTH-5
+    - AUTH-6
+    - Production
+    - NewAPI
+    - 共享/既有数据库
+    - 未经单独授权的外部资源
+decision: PENDING_CANDIDATE
+allowedValues: [APPROVE, REVISE, REJECT, DEFER]
+reasoning: "候选人本人填写完整理由"
+conditions: []
+findings: []
+residualRisks: []
+unknowns: []
+conflictDisposition: "引用披露记录并写明回避/缓解结论"
+effectiveConditions:
+  - "Owner 来源授权由 ACTOR-OWNER-1 实际签署并可验证"
+  - "候选人本人接受任命、能力/冲突披露完整且无未解决回避事项"
+  - "候选人的判断及原始签名提交通过独立核验"
+  - "实际 Registry receipt 已提交到 governance/decision-registry 并经远端读回验证"
+  - "Receipt 中状态与生效时间只在全部前置条件满足后填写"
+signedAt: PENDING_CANDIDATE
+signingKeyFingerprint: PENDING_CANDIDATE
+signedCommitSha: PENDING_CANDIDATE
+signedCommitUrl: PENDING_CANDIDATE
+signatureStatus: PENDING_GITHUB_VERIFIED
+registryReceiptUri: PENDING_REGISTRY_RECEIPT
+statusAfterRegistration: NOT_EFFECTIVE

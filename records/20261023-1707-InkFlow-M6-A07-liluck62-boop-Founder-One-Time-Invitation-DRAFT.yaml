@@ -1,0 +1,75 @@
+schema: inkflow.decision-registry/admission-v1
+recordId: FOUNDER-ROOT-001-v1.0
+recordType: founder-one-time-approver-invitation-and-source-authorization
+status: PENDING_ACTOR_OWNER_1_SIGNATURE
+version: 1
+ownerIdentityRef: ACTOR-OWNER-1
+ownerGitHubAccount: leejaen
+candidateIdentityRef: GITHUB_USER:liluck62-boop
+candidateContact: "由 Owner 使用已掌握的联系渠道转发；邮箱不写入治理记录"
+scope:
+  project: InkFlow
+  workPackage: M6-A07
+  product: Windows Desktop
+  domain: Identity-only
+  environment: TEST_ONLY
+  assets: "仅限 Owner 声明拥有/控制的 InkFlow 项目治理资料与测试源码工件"
+  exclusions:
+    - Production
+    - NewAPI
+    - 共享或既有数据库
+    - 客户或真实身份数据
+    - 生产密钥和凭证
+    - 未经单独授权的外部资源
+sourceAuthority:
+  declaration: "由 ACTOR-OWNER-1 签署时确认：本人独立拥有或控制本记录范围内的 InkFlow 项目资产，并有权建立该范围的项目治理安排。"
+  superiorRightsHolderCheck: PENDING_OWNER_CONFIRMATION
+  evidenceReference: "FOUNDER-ROOT-001 v0.1 已签署候选记录；本记录为前瞻性新增版本，不覆盖历史记录"
+  limitations: "如存在公司、共同所有人、合同或其他上位权利主体，必须附该主体真实授权；不得以本声明替代。"
+oneTimeMandate:
+  mandateId: GOV-BOOTSTRAP-001-v1
+  decisionRightId: DR-GOV-BOOTSTRAP-001-v1
+  permittedDecision: "仅针对所附冻结审批包，决定是否建立 FOUNDER-GOV-001-v1、DR-REGISTRY-RECORD-001-v1 及 INKFLOW-REGISTRY-CUSTODIAN-001-v1"
+  permittedOutcomes: [APPROVE, REVISE, REJECT, DEFER]
+  provisionalSubmission:
+    actor: ACTOR-OWNER-1
+    permittedActions:
+      - "以临时提交人身份登记已签署邀请及候选人审批材料"
+      - "在候选人决定登记后追加仅记录事实的 Registry receipt"
+    prohibitedActions:
+      - "代候选人决定或签署"
+      - "自行批准候选人决定"
+      - "提前宣布 Mandate 或 Custodian 任命生效"
+      - "绕过 Registry Ruleset"
+  notDelegable: true
+  effectiveFrom: "Owner 签署并实际送达候选人后，候选人接受时生效"
+  expires: "候选人作出本次决定、被撤销，或接受后 30 个日历日，以较早者为准"
+  noOtherRights: [AUTH-1, AUTH-2, AUTH-3, AUTH-4, engineering, AUTH-5, AUTH-6, production, database-access, resource-admission]
+reviewPackage:
+  id: INKFLOW-M6-A07-APPROVER-PACKAGE-001
+  version: "0.1"
+  path: "20261023-1707-InkFlow-M6-A07-liluck62-boop-Review-Package-v0.1.md"
+  sha256: ECF6356090B99F41C18A0045BE7838E67F869FAFCE2D8A7542CF411F5EDFF6CD
+bookReferences:
+  - "1810 §§12-16, 19, 30, 47, 60-65, 112, 114"
+  - "1820 §15 and Appendix B"
+  - "1885 §§110-112"
+  - "1890 §§16, 22, 30, 58"
+  - "008 §§14.2, 26.2-26.3"
+ownerDecision:
+  outcome: "Owner 本人签署此来源授权与邀请，不代表候选人批准"
+  conditions: []
+  signedAt: PENDING_OWNER_SIGNATURE
+  signingKeyFingerprint: SHA256:MNWMACWT/Eb8IRvAM1qie5wRA1LLCor8yqnrwKBBdSg
+  signedCommitSha: PENDING_OWNER_SIGNED_COMMIT
+  signedCommitUrl: PENDING_OWNER_SIGNED_COMMIT_URL
+candidateAcceptance: PENDING_CANDIDATE
+registry:
+  targetBranch: governance/decision-registry
+  initialStatus: NOT_EFFECTIVE
+  receiptCommitSha: PENDING_APPROVAL_AND_REGISTRY_RECEIPT
+  receiptUrl: PENDING_APPROVAL_AND_REGISTRY_RECEIPT
+  effectiveAt: null
+attestationText: >-
+  本人是 InkFlow 项目的个人 Project Owner，并声明我个人拥有或控制本记录范围内的 InkFlow 资产，有权为这些资产建立项目范围内的治理流程。我已列明任何上位权利主体、共同所有人、合同或外部约束。本文件只向前生效、仅限该项目和 TEST_ONLY 工作，不创设任何法律实体权限，也不免除独立审查或专业审批。我仅为本包所述的一次性审查任命所列候选人；任命按所列条件到期，不授予工程实现或 AUTH 权限。
+notice: "本文件当前未签署。不得将 PENDING 字段或聊天邀请当作生效授权。"

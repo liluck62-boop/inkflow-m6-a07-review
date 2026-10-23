@@ -1,0 +1,60 @@
+schema: inkflow.decision-registry/admission-v1
+recordId: GOV-BOOTSTRAP-001-ROLE-ACCEPTANCE-v1
+recordType: role-assignment-acceptance
+status: PENDING_CANDIDATE_ACCEPTANCE_AND_SIGNATURE
+candidate:
+  identityRef: GITHUB_USER:liluck62-boop
+  verifiedGitHubUsername: PENDING_CANDIDATE_VERIFICATION
+  signingKeyFingerprint: PENDING_CANDIDATE_REPORT
+roleAssignment:
+  assignmentId: GOV-BOOTSTRAP-001-v1
+  role: "Constituting Approver（一次性构成性审批人）"
+  roleVersion: 1
+  purpose: "独立审查项目首个 Mandate、Registry 指定和首个仅限记录职责的 Custodian 任命"
+  scope:
+    packageId: INKFLOW-M6-A07-APPROVER-PACKAGE-001
+    packageVersion: "0.1"
+    packageSha256: ECF6356090B99F41C18A0045BE7838E67F869FAFCE2D8A7542CF411F5EDFF6CD
+    outcomes: [APPROVE, REVISE, REJECT, DEFER]
+  sourceAuthorization:
+    recordId: FOUNDER-ROOT-001-v1.0
+    ownerIdentityRef: ACTOR-OWNER-1
+    ownerSignedCommitSha: PENDING_OWNER_SIGNED_COMMIT
+    ownerSignedCommitUrl: PENDING_OWNER_SIGNED_COMMIT_URL
+  environment: TEST_ONLY
+  effectiveFrom: "候选人签署接受且 Owner 邀请已真实签署/送达之后"
+  effectiveUntil: "决定作出、任命撤销，或接受后 30 个日历日，以较早者为准"
+  nonDelegable: true
+  prohibited:
+    - AUTH-1
+    - AUTH-2
+    - AUTH-3
+    - AUTH-4
+    - 工程实现
+    - AUTH-5
+    - AUTH-6
+    - Production
+    - 数据库访问或资源准入
+candidateAcceptance:
+  accepted: "由候选人填写 true 或 false"
+  competenceAndConflictRecord: "引用独立披露文件"
+  reviewedPackageSha256: ECF6356090B99F41C18A0045BE7838E67F869FAFCE2D8A7542CF411F5EDFF6CD
+  candidateSignatureKeyFingerprint: PENDING_CANDIDATE
+  signedAt: PENDING_CANDIDATE
+  signedCommitSha: PENDING_CANDIDATE
+  signedCommitUrl: PENDING_CANDIDATE
+sourceMandate:
+  status: "一次性授权来源为 Owner 实际签署的 FOUNDER-ROOT-001-v1.0；不假定存在历史 Mandate"
+  mandateUri: PENDING_OWNER_SIGNED_RECORD_URI
+segregationOfDuties:
+  distinctFromOwner: true
+  distinctFromM6A07Implementer: "候选人确认 true 或披露例外"
+  beneficiaryConflict: "在独立披露文件中申报"
+  selfReviewProhibited: true
+review:
+  reviewOwner: "Owner 仅跟踪到期/撤销；不得代表候选人复核或续任"
+  reviewAt: "不晚于本任命到期日"
+revocation: "Owner 可撤销邀请；一经撤销不得继续作出决定"
+decision: PENDING_CANDIDATE_ACCEPTANCE
+signature: PENDING_CANDIDATE_SIGNATURE
+registryReceipt: PENDING

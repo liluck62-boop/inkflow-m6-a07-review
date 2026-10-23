@@ -1,0 +1,56 @@
+schema: inkflow.decision-registry/v1
+recordId: INKFLOW-FOUNDER-GOV-BOOTSTRAP-RECEIPT-0001
+recordType: constituting-decision-registry-receipt
+version: 1
+status: PENDING_REGISTRATION
+decisionId: GOV-BOOTSTRAP-001-DECISION-v1
+candidateIdentityRef: GITHUB_USER:liluck62-boop
+candidateDecision: PENDING_CANDIDATE
+candidateEvidence:
+  privateEvidenceRepository: PENDING_REPOSITORY_URL
+  originalSignedCommitSha: PENDING_CANDIDATE_COMMIT
+  originalSignedCommitUrl: PENDING_CANDIDATE_COMMIT_URL
+  githubVerification: PENDING_OWNER_VERIFICATION
+  signingKeyFingerprint: PENDING_CANDIDATE_VERIFICATION
+  roleAcceptanceSha256: PENDING_HASH
+  competenceConflictDisclosureSha256: PENDING_HASH
+  constitutingDecisionSha256: PENDING_HASH
+reviewPackage:
+  id: INKFLOW-M6-A07-APPROVER-PACKAGE-001
+  version: "0.1"
+  sha256: ECF6356090B99F41C18A0045BE7838E67F869FAFCE2D8A7542CF411F5EDFF6CD
+ownerSource:
+  recordId: FOUNDER-ROOT-001-v1.0
+  signedCommitSha: PENDING_OWNER_SIGNED_COMMIT
+  signedCommitUrl: PENDING_OWNER_SIGNED_COMMIT_URL
+  signingKeyFingerprint: SHA256:MNWMACWT/Eb8IRvAM1qie5wRA1LLCor8yqnrwKBBdSg
+verification:
+  candidateAccountMatches: PENDING
+  candidateCommitVerified: PENDING
+  roleAccepted: PENDING
+  competenceSufficientForScope: PENDING
+  conflictDispositionComplete: PENDING
+  packageAndBookDigestsMatch: PENDING
+  decisionCompleteAndCandidateAuthored: PENDING
+  sourceAuthorityInScope: PENDING
+  rulesetActiveAndNoBypass: PENDING
+  registrationCommitVerified: PENDING
+registry:
+  repository: https://github.com/leejaen/UltraImageViewer
+  targetBranch: governance/decision-registry
+  rulesetId: 25699958
+  registrationPrMergeCommitSha: PENDING
+  registrationPrMergeCommitUrl: PENDING
+  finalReceiptCommitSha: "由本回执所在的最终 Registry commit URL/SHA 确定"
+  finalReceiptCommitUrl: "合并后填写实际 URL"
+  verifiedReadBackAt: PENDING
+effect:
+  status: NOT_EFFECTIVE
+  effectiveAt: null
+  rule: "只有全部 verification 字段通过、候选人决定为 APPROVE、且本回执进入受保护目标分支后，才将状态更新为 EFFECTIVE；使用最终回执 commit 的真实提交时间"
+  auth1To4: NOT_EFFECTIVE
+recordedBy: ACTOR-OWNER-1
+recordingCapacity: "Founder 临时提交人；不声称 Custodian 任命已提前生效"
+signedAt: PENDING_OWNER_RECEIPT_SIGNATURE
+signatureStatus: PENDING_GITHUB_VERIFIED
+notice: "此模板不是回执；不得预填 verified、APPROVE 或 EFFECTIVE。"

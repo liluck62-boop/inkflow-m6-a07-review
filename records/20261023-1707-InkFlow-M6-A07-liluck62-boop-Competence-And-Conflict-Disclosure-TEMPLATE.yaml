@@ -1,0 +1,38 @@
+schema: inkflow.decision-registry/admission-v1
+recordId: GOV-BOOTSTRAP-001-COMPETENCE-CONFLICT-v1
+recordType: candidate-competence-independence-conflict-disclosure
+status: PENDING_CANDIDATE_DISCLOSURE_AND_SIGNATURE
+candidateIdentityRef: GITHUB_USER:liluck62-boop
+candidateGitHubUsername: liluck62-boop
+reviewPackage:
+  id: INKFLOW-M6-A07-APPROVER-PACKAGE-001
+  version: "0.1"
+  sha256: ECF6356090B99F41C18A0045BE7838E67F869FAFCE2D8A7542CF411F5EDFF6CD
+competence:
+  relevantExperience: "候选人本人填写可核验的相关经验"
+  governanceAndArchitectureKnowledge: "候选人说明其对 Mandate、Decision Right、Role Assignment、SoD 和受控记录的审查能力"
+  evidenceReferences: []
+  scopeTheyCanAssess: "候选人本人填写"
+  limitationsOrUnknowns: []
+  credentials: "仅填写候选人自愿提供且与审查相关的资格；没有则写无；不得由 Owner/Codex 推断"
+independence:
+  differentNaturalPersonFrom: [ACTOR-OWNER-1, M6-A07-IMPLEMENTER]
+  priorParticipation: "候选人披露是否参与该设计、实现或先前审批"
+  reportingOrEmploymentRelationship: "候选人填写"
+  financialOrOwnershipInterest: "候选人填写"
+  supplierOrDeliveryRelationship: "候选人填写"
+  performanceOrPersonalInterest: "候选人填写"
+conflicts:
+  declaredConflicts: []
+  recusalRequested: "候选人填写 true 或 false"
+  proposedMitigation: []
+  candidateConclusion: "候选人本人说明是否能独立作出本次决定"
+confidentiality:
+  reviewedMaterialHandling: "只保留最少必要的身份/资格引用；不在仓库记录私人凭证、敏感身份材料或无关个人信息"
+attestation: >-
+  本披露由候选人本人填写。本人确认所列能力、范围限制、关系和利益冲突据本人所知真实完整；若存在未披露的重大冲突或无法独立判断的事项，将选择回避、REVISE 或 DEFER，而不作无条件批准。
+decisionEligibility: "由候选人填写：ELIGIBLE / RECUSAL_REQUIRED / INSUFFICIENT_SCOPE"
+signedAt: PENDING_CANDIDATE
+signingKeyFingerprint: PENDING_CANDIDATE
+signedCommitSha: PENDING_CANDIDATE
+signedCommitUrl: PENDING_CANDIDATE

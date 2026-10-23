@@ -1,0 +1,45 @@
+schema: inkflow.decision-registry/admission-v1
+manifestId: INKFLOW-M6-A07-REVIEW-BASELINE-001
+status: FROZEN_REVIEW_INPUTS_NOT_AUTHORITY_EFFECTIVE
+frozenAt: "2026-10-23 17:07 Asia/Shanghai"
+candidateGitHubUsername: liluck62-boop
+reviewPackage:
+  id: INKFLOW-M6-A07-APPROVER-PACKAGE-001
+  version: "0.1"
+  sourcePath: "docs/operations/test-only/20261023-1357-InkFlow-M6-A07-Constituting-Approver-And-AUTH-Review-Package.md"
+  frozenCopyPath: "20261023-1707-InkFlow-M6-A07-liluck62-boop-Review-Package-v0.1.md"
+  sizeBytes: 35981
+  sha256: ECF6356090B99F41C18A0045BE7838E67F869FAFCE2D8A7542CF411F5EDFF6CD
+architectureBookFiles:
+  - path: "ProductBook/180-Governance-and-Compliance/1810-Governance-Bodies-Decision-Rights-Accountability-and-RACI.md"
+    sha256: 7459D4CF473E7CAB3F5E2248AF56DC4651026EAA43D590969F8D720DF3027E0A
+    sections: ["§§12–16", "§19", "§30", "§47", "§§60–65", "§112", "§114"]
+  - path: "ProductBook/180-Governance-and-Compliance/1820-Administrative-Roles-Separation-of-Duties-Approval-and-Break-Glass.md"
+    sha256: 89A007D2F50C4257AF65669EF250C6D0E4287ECEBC2D63F15F92914A74B26FFF
+    sections: ["§15", "Appendix B"]
+  - path: "ProductBook/180-Governance-and-Compliance/1885-Document-Version-Freeze-Supersession-and-Publishing-Governance.md"
+    sha256: 617E91D40C0B6C0E4D47DB34300EBC4FA434EB0A82963AE8F4D78A82BB684CB0
+    sections: ["§§110–112"]
+  - path: "ProductBook/180-Governance-and-Compliance/1890-Governance-and-Compliance-Architecture-Freeze.md"
+    sha256: 6A6633431B169E0F4775951F937D3E2F4832B43840EE1D79C224B312079F9D14
+    sections: ["§§16", "§22", "§30", "§58"]
+  - path: "ProductBook/008-Architecture-Freeze-Register.md"
+    sha256: C250ECCB9EE0D9BC30BD94CCBE4CA95215FAB6D610046044E5B6E0A2B264F4B5
+    sections: ["§14.2", "§§26.2–26.3"]
+existingRegistryEvidence:
+  - path: "docs/operations/test-only/decision-registry/records/bootstrap-ledger-v1.json"
+    sha256: 5D68E0903761FE469718947718C46BB46C122D0CF7B83DA164E2ADACB3021BEB
+  - path: "docs/operations/test-only/decision-registry/records/registry-bootstrap-receipt-0001.json"
+    sha256: 52EE471B0AA5DD712E600623EB0BB9D957AC109A8E9E7C200830C090175CBBF6
+  - path: "docs/operations/test-only/decision-registry/records/registry-bootstrap-receipt-0002.json"
+    sha256: 9A9C619762AA07A7D2349A5C4E28FBD52BF17E4954B279C907CD9640D3DECF7C
+ruleset:
+  id: 25699958
+  name: INKFLOW-DECISION-REGISTRY-INTEGRITY-v1
+  targetBranch: refs/heads/governance/decision-registry
+  state: "按此前独立核验结果记录；提交时仍须复核 Active 状态"
+  evidenceUrl: "https://github.com/leejaen/UltraImageViewer/settings/rules/25699958"
+limitations:
+  - "本清单固定审查材料摘要，不构成身份、能力、Mandate、签名或批准。"
+  - "当前目标分支和 Ruleset 状态必须在实际登记时重新核验。"
+  - "若任何源文件摘要变化，停止并生成新版本审查包；不得沿用此版本号和摘要。"
