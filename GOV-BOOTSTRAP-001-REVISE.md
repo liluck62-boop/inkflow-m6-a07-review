@@ -1,16 +1,22 @@
-# GOV-BOOTSTRAP-001 审查决定：REVISE
+# InkFlow 构成性治理独立审查结论
 
-## 决定
+**Decision ID：** GOV-BOOTSTRAP-001-DECISION-v1
 
-- decision_id: `GOV-BOOTSTRAP-001-DECISION-v1`
-- decision: `REVISE`
-- reviewed_package: `INKFLOW-M6-A07-APPROVER-PACKAGE-001`, version `0.1`
-- scope: 仅审查初始 Mandate、Registry 记录型 Decision Right 和首个 Registry Custodian 任命
-- status: `NOT_EFFECTIVE`
+**Reviewer：** liluck62-boop
 
-本意见表示当前材料需要修订后重新审查。它不是候选人的正式签名决定，不构成 Mandate、Decision Right、Custodian 任命或 AUTH-1～AUTH-4 的生效记录，也不替代真实人员的身份、能力和利益冲突披露。
+**Decision：** REVISE
 
-## 理由与发现
+**审查对象：** InkFlow M6-A07 Founder Mandate Bootstrap
+
+**审查材料版本及 SHA256：** `INKFLOW-M6-A07-APPROVER-PACKAGE-001` / v0.1 / `ECF6356090B99F41C18A0045BE7838E67F869FAFCE2D8A7542CF411F5EDFF6CD`
+
+## 1. 审查结论
+
+REVISE — 要求修改，暂不批准初始 Founder Mandate、Decision Right 和 Registry Custodian 任命。
+
+在以下问题完成修订、重新提交并由本人重新审查前，`FOUNDER-GOV-001`、`DR-REGISTRY-RECORD-001` 和 `INKFLOW-REGISTRY-CUSTODIAN-001` 均保持 `NOT_EFFECTIVE`。AUTH-1～AUTH-4 也不因本次审查而获得批准或生效。
+
+## 2. 发现的问题
 
 ### F-01（高）：签名提交 SHA 存在自引用/时序缺口
 
@@ -22,7 +28,7 @@ Owner、候选人和 Registry Receipt 模板都要求记录自身或后续提交
 
 ### F-03（高）：冻结基线中的远端事实无法由当前材料复核
 
-Registry 分支 HEAD、Ruleset Active 状态、bypass 配置、既有回执和远端签名验证均属于外部事实。本目录只保留了摘要和先前核验的文字描述，没有对应的可复核 API 输出、仓库快照或 Ruleset 导出。
+Registry 分支 HEAD、Ruleset Active 状态、bypass 配置、既有回执和远端签名验证均属于外部事实。本审查目录只保留摘要和先前核验的文字描述，没有对应的可复核 API 输出、仓库快照或 Ruleset 导出。
 
 ### F-04（中高）：受保护分支的签名合并流程不完整
 
@@ -30,7 +36,7 @@ Registry 分支 HEAD、Ruleset Active 状态、bypass 配置、既有回执和�
 
 ### F-05（中）：任命接受、生效和登记的状态边界不统一
 
-不同文书对 `effectiveFrom` 的定义不同，容易把候选人接受一次性审查任命误读成初始 Mandate 或 Custodian 任命已经生效。应统一状态机并明确只有 Registry receipt 进入受保护目标分支后，治理权才可标记为 `EFFECTIVE`。
+不同文书对 `effectiveFrom` 的定义不同，容易把候选人接受一次性审查任命误读成初始 Mandate 或 Custodian 任命已经生效。应统一状态机，并明确只有 Registry receipt 进入受保护目标分支后，治理权才可标记为 `EFFECTIVE`。
 
 ### F-06（中）：能力、身份和冲突披露缺少独立核验标准
 
@@ -44,29 +50,41 @@ Registry 分支 HEAD、Ruleset Active 状态、bypass 配置、既有回执和�
 
 指南中存在 `D:\project\InkFlow\...`、`C:\if-m6a07-registry` 和特定 SSH 密钥路径等环境假设，未全部明确标记为必须替换的占位符。
 
-## 修订条件
+## 3. 必须完成的修改
 
-重新提交 `APPROVE` 前，至少完成以下事项：
-
-1. 采用两阶段签名/索引模型，明确原始签署提交、证据索引提交和最终 Receipt 提交的关系。
+1. 采用两阶段签名/索引模型，明确原始签署提交、证据索引提交和最终 Registry Receipt 提交之间的关系。
 2. 提供并核验 Owner 的资产权利及所有上位权利主体授权；无法证明时保持 `DEFER` 或 `REVISE`。
 3. 在实际登记前重新核验远端 Registry 分支、Ruleset、bypass 配置和相关 commit 的签名状态，并保存只读证据。
 4. 统一 `INVITED -> ACCEPTED_FOR_REVIEW -> DECISION_SIGNED -> REGISTERED -> EFFECTIVE` 等状态及其前置条件。
 5. 明确 Registry 合并提交和最终 Receipt 的签名方案，并在目标分支读回后逐项验证。
-6. 补充身份/能力/冲突核验责任、隐私最小化、访问撤销和保留规则。
-7. 将环境路径改为显式占位符，并在执行前校验路径、远端、分支和账户。
+6. 补充身份、能力和冲突核验责任、实现者独立性证据、失败处理及替代候选人流程。
+7. 补充冲突材料的最小化披露、访问控制、保留期限、访问撤销和删除/归档规则。
+8. 将操作指南中的环境路径改为显式占位符，并在执行前校验路径、远端、分支和账户。
 
-## 剩余风险
+## 4. 重新提交审核的条件
 
-- 当前不能确认 Owner 对全部声明资产拥有足够的治理授权。
-- 当前不能确认候选人与 M6-A07 实现者完全独立，或不存在未披露的重大利益冲突。
-- 当前不能确认远端 Registry 和 Ruleset 状态仍与冻结 Manifest 一致。
-- 在上述问题完成前，`FOUNDER-GOV-001`、`DR-REGISTRY-RECORD-001`、`INKFLOW-REGISTRY-CUSTODIAN-001` 以及 AUTH-1～AUTH-4 均保持 `NOT_EFFECTIVE`。
+重新提交时必须同时提供以下可检验材料：
 
-## 签署状态
+1. 一套可重放的两阶段签名/索引示例，证明原始签署提交 SHA 不会被自身内容改变。
+2. Owner 来源权利和上位权利主体授权的真实证据引用、摘要、核验人及核验时间。
+3. Registry 目标分支最新 SHA、Ruleset 完整关键配置、bypass 配置和相关 commit 的 GitHub 验证结果。
+4. 统一后的状态机、每个状态的进入条件、退出条件和生效判定。
+5. 合并后目标分支的实际读回结果，包含新增提交 SHA、Verified 状态、签署身份和最终 Receipt URI。
+6. 候选人的身份引用、能力范围、实现者独立性确认和完整利益冲突披露；如有冲突，提供回避或替代候选人记录。
+7. 修订后的审查包版本和 SHA256；若任何源材料变化，不得继续使用当前 v0.1 摘要。
 
-- candidate_identity_ref: `PENDING_CANDIDATE`
-- signed_at: `PENDING_CANDIDATE`
-- signing_key_fingerprint: `PENDING_CANDIDATE`
-- signed_commit_sha: `PENDING_CANDIDATE`
-- registry_receipt_uri: `PENDING_REGISTRY_RECEIPT`
+## 5. 审查人声明
+
+- 本人已独立审查上述材料。
+- 本人确认所填写意见代表真实判断。
+- 本人已如实披露相关利益冲突：**[审批人填写披露情况；不得由 Owner 或 Codex 代填]**
+- 本人的专业能力及审查范围：**[审批人填写能力、经验、范围和限制；不得由 Owner 或 Codex 推断]**
+- 本次审查所依据的一次性邀请及任命记录：**[填写真实 URI；若尚未生效则明确说明]**
+
+**签署方式：** 本人控制的 GitHub SSH Signing Key
+
+**Verified Commit：** `[签署推送后填写；当前文件未签署]`
+
+**实际签署时间：** `[填写实际签署时间及时区]`
+
+**说明：** REVISE 不构成 Founder Mandate 的批准或授权生效。本文件当前为待候选人填写并签署的审查结论草案；GitHub 账户身份、SSH Signing Key、能力、利益冲突、任命 URI 和签名均不得由 Owner 或 Codex 代填。
